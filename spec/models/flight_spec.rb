@@ -17,5 +17,11 @@ RSpec.describe Flight, type: :model do
       @flight.flight_company = "gol"
       expect(@flight.flight_company).to eq("gol")
     end
+    
+    it "flight_from preenchido?" do
+      @flight.flight_from = ""
+      expect(@flight.flight_from).to eq("porto alegre")
+    end
+    
   end
 end
