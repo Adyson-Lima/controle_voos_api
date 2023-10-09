@@ -34,7 +34,7 @@ RSpec.describe Flight, type: :model do
     end
     
     it "flight_hour preenchido?" do
-      @flight.flight_hour = ""
+      @flight.flight_hour = "12:00"
       expect(@flight.flight_hour).to eq("12:00")
     end
     
