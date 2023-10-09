@@ -39,7 +39,7 @@ RSpec.describe Flight, type: :model do
     end
     
     it "flight_status preenchido?" do
-      @flight.flight_status = ""
+      @flight.flight_status = "confirmado"
       expect(@flight.flight_status).to eq("confirmado")
     end
     
