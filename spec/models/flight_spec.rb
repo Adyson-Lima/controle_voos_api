@@ -13,5 +13,9 @@ RSpec.describe Flight, type: :model do
       expect(@flight.flight_number).to eq("1234")
     end
     
+    it "flight_company preenchido?" do
+      @flight.flight_company = ""
+      expect(@flight.flight_company).to eq("gol")
+    end
   end
 end
