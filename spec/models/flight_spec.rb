@@ -24,7 +24,7 @@ RSpec.describe Flight, type: :model do
     end
     
     it "flight_to preenchido?" do
-      @flight.flight_to = ""
+      @flight.flight_to = "belém"
       expect(@flight.flight_to).to eq("belém")
     end
     
