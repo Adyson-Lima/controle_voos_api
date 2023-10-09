@@ -44,4 +44,21 @@ RSpec.describe Flight, type: :model do
     end
     
   end
+  
+  describe "Teste de validação do model Flight" do
+  
+    it "Flight valido com campos obrigatorios preenchidos?" do
+      @flight.flight_number = ""
+      @flight.flight_company = "latam"
+      @flight.flight_from = "porto alegre"
+      @flight.flight_to = "belem"
+      @flight.flight_gate = "2"
+      @flight.flight_hour = "12:00"
+      @flight.flight_status = "confirmed"
+      
+      expect(@flight).to be_valid
+    end
+    
+  end
+  
 end
