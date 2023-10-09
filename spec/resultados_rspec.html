@@ -287,22 +287,46 @@ a {
 <div id="div_group_2" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_2" class="passed">Teste de preenchimento dos campos do model Flight</dt>
-    <script type="text/javascript">moveProgressBar('16.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">flight_number preenchido?</span><span class='duration'>0.04805s</span></dd>
-    <script type="text/javascript">moveProgressBar('33.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">flight_company preenchido?</span><span class='duration'>0.00069s</span></dd>
-    <script type="text/javascript">moveProgressBar('50.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">flight_from preenchido?</span><span class='duration'>0.00056s</span></dd>
-    <script type="text/javascript">moveProgressBar('66.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">flight_to preenchido?</span><span class='duration'>0.00054s</span></dd>
-    <script type="text/javascript">moveProgressBar('83.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">flight_gate preenchido?</span><span class='duration'>0.00053s</span></dd>
-    <script type="text/javascript">moveProgressBar('100.0');</script>
+    <script type="text/javascript">moveProgressBar('14.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">flight_number preenchido?</span><span class='duration'>0.04447s</span></dd>
+    <script type="text/javascript">moveProgressBar('28.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">flight_company preenchido?</span><span class='duration'>0.00073s</span></dd>
+    <script type="text/javascript">moveProgressBar('42.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">flight_from preenchido?</span><span class='duration'>0.00054s</span></dd>
+    <script type="text/javascript">moveProgressBar('57.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">flight_to preenchido?</span><span class='duration'>0.00053s</span></dd>
+    <script type="text/javascript">moveProgressBar('71.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">flight_gate preenchido?</span><span class='duration'>0.00052s</span></dd>
+    <script type="text/javascript">moveProgressBar('85.7');</script>
     <dd class="example passed"><span class="passed_spec_name">flight_hour preenchido?</span><span class='duration'>0.00053s</span></dd>
+    <script type="text/javascript">makeRed('rspec-header');</script>
+    <script type="text/javascript">makeRed('div_group_2');</script>
+    <script type="text/javascript">makeRed('example_group_2');</script>
+    <script type="text/javascript">moveProgressBar('100.0');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">flight_status preenchido?</span>
+      <span class="duration">0.00524s</span>
+      <div class="failure" id="failure_1">
+        <div class="message"><pre>  Failure/Error: expect(@flight.flight_status).to eq(&quot;confirmado&quot;)
+
+    expected: &quot;confirmado&quot;
+         got: &quot;&quot;
+
+    (compared using ==)
+  # ./spec/models/flight_spec.rb:43:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
+        <div class="backtrace"><pre>./spec/models/flight_spec.rb:43:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
+    <pre class="ruby"><code><span class="linenum">41</span>    it "flight_status preenchido?" do
+<span class="linenum">42</span>      @flight.flight_status = ""
+<span class="offending"><span class="linenum">43</span>      expect(@flight.flight_status).to eq("confirmado")</span>
+<span class="linenum">44</span>    end
+<span class="linenum">45</span>    
+<span class="linenum">46</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.05345 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "6 examples, 0 failures";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.06367 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "7 examples, 1 failure";</script>
 </div>
 </div>
 </body>

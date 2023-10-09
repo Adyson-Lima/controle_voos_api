@@ -38,5 +38,10 @@ RSpec.describe Flight, type: :model do
       expect(@flight.flight_hour).to eq("12:00")
     end
     
+    it "flight_status preenchido?" do
+      @flight.flight_status = ""
+      expect(@flight.flight_status).to eq("confirmado")
+    end
+    
   end
 end
