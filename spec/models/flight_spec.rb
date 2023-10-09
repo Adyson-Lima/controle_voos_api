@@ -61,7 +61,7 @@ RSpec.describe Flight, type: :model do
     
     it "Flight invalido com campos obrigatorios em branco?" do
       flight = Flight.new
-      expect(flight).to be_valid      
+      expect(flight).to be_invalid      
     end
     
   end
