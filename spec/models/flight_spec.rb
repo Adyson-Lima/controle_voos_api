@@ -28,5 +28,10 @@ RSpec.describe Flight, type: :model do
       expect(@flight.flight_to).to eq("belém")
     end
     
+    it "flight_gate preenchido?" do
+      @flight.flight_gate = ""
+      expect(@flight.flight_gate).to eq("2")
+    end
+    
   end
 end
