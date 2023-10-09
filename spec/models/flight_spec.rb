@@ -48,7 +48,7 @@ RSpec.describe Flight, type: :model do
   describe "Teste de validação do model Flight" do
   
     it "Flight valido com campos obrigatorios preenchidos?" do
-      @flight.flight_number = ""
+      @flight.flight_number = "1234"
       @flight.flight_company = "latam"
       @flight.flight_from = "porto alegre"
       @flight.flight_to = "belem"
