@@ -32,6 +32,10 @@ class Api::V1::FlightsController < ApplicationController
     end
     
   end
+  
+  def destroy
+    @flight.destroy
+  end
 
 private
 
