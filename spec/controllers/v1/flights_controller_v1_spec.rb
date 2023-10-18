@@ -16,4 +16,14 @@ RSpec.describe Api::V1::FlightsController, type: :controller do
         
   end
   
+  describe 'GET /api/v1/flight/devices/{id}' do
+    
+    it 'Consegue listar um voo específico e retornar status 200?' do
+      get :show, params: {id: @flight.id}
+      expect(response.body).to include_json(id: @flight.id)
+      expect(response).to have_http_status(200)
+    end
+    
+  end
+  
 end
