@@ -6,6 +6,10 @@ class Api::V1::FlightsController < ApplicationController
     @flights = Flight.all
     render json: @flights
   end
+  
+  def show
+    render json: @flight
+  end
 
 private
 

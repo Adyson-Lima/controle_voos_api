@@ -12,6 +12,9 @@ gem "sqlite3", "~> 1.4"
 # Gem faker para seeds.rb
 gem "faker"
 
+# Gem para testes com json
+gem 'rspec-json_expectations'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
