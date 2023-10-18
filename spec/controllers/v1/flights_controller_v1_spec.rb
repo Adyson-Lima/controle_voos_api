@@ -50,4 +50,16 @@ RSpec.describe Api::V1::FlightsController, type: :controller do
     end
   end
   
+  describe 'DELETE /api/v1/flights/{id}' do
+    
+    it 'Consegue apagar um voo e retornar status 204?' do
+      flight = Flight.last
+      delete :destroy, params: {id: flight.id}
+      
+      expect(Flight.all).not_to include flight
+      expect(response).to have_http_status(204)
+    end
+    
+  end
+  
 end
