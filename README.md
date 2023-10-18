@@ -11,9 +11,6 @@
 
 -DELETE: localhost/api/v1/flights/id
 
-# Sobre a API
-## A documentação completa RDOC está na pasta controlevoos/documentacao
-
 # Tecnologias utilizadas
 
 - Ruby
