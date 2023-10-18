@@ -10,6 +10,8 @@ class Api::V1::FlightsController < ApplicationController
   def show
     render json: @flight
   end
+  
+  
 
 private
 

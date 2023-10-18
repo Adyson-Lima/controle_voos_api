@@ -287,52 +287,79 @@ a {
 <div id="div_group_2" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_2" class="passed">GET /api/v1/flights</dt>
-    <script type="text/javascript">moveProgressBar('9.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue listar todos os voos e retornar status 200?</span><span class='duration'>0.05994s</span></dd>
+    <script type="text/javascript">moveProgressBar('8.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">Consegue listar todos os voos e retornar status 200?</span><span class='duration'>0.06639s</span></dd>
   </dl>
 </div>
 <div id="div_group_3" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_3" class="passed">GET /api/v1/flight/devices/{id}</dt>
-    <script type="text/javascript">moveProgressBar('18.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue listar um voo específico e retornar status 200?</span><span class='duration'>0.00691s</span></dd>
+    <script type="text/javascript">moveProgressBar('16.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">Consegue listar um voo específico e retornar status 200?</span><span class='duration'>0.00559s</span></dd>
   </dl>
 </div>
 <div id="div_group_4" class="example_group passed">
-  <dl style="margin-left: 0px;">
-  <dt id="example_group_4" class="passed">Flight</dt>
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_4" class="passed">POST /api/v1/flights</dt>
+    <script type="text/javascript">makeRed('rspec-header');</script>
+    <script type="text/javascript">makeRed('div_group_4');</script>
+    <script type="text/javascript">makeRed('example_group_4');</script>
+    <script type="text/javascript">moveProgressBar('25.0');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">Consegue criar um voo e retornar status 201?</span>
+      <span class="duration">0.00363s</span>
+      <div class="failure" id="failure_1">
+        <div class="message"><pre>  Failure/Error: post :create, params: {flight: {flight_number: @flight.flight_number, flight_company: @flight.flight_company, flight_from: @flight.flight_from, flight_to: @flight.flight_to, flight_gate: @flight.flight_gate, flight_hour: @flight.flight_hour, flight_status: @flight.flight_status},format: :json}
+
+  AbstractController::ActionNotFound:
+    The action &#39;create&#39; could not be found for Api::V1::FlightsController
+  # ./spec/controllers/v1/flights_controller_v1_spec.rb:33:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
+        <div class="backtrace"><pre>./spec/controllers/v1/flights_controller_v1_spec.rb:33:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
+    <pre class="ruby"><code><span class="linenum">31</span>    it 'Consegue criar um voo e retornar status 201?' do
+<span class="linenum">32</span>      
+<span class="offending"><span class="linenum">33</span>      post :create, params: {flight: {flight_number: @flight.flight_number, flight_company: @flight.flight_company, flight_from: @flight.flight_from, flight_to: @flight.flight_to, flight_gate: @flight.flight_gate, flight_hour: @flight.flight_hour, flight_status: @flight.flight_status},format: :json}</span>
+<span class="linenum">34</span>      
+<span class="linenum">35</span>      expect(response.body).to include_json(flight_number: @flight.flight_number)
+<span class="linenum">36</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
   </dl>
 </div>
 <div id="div_group_5" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_5" class="passed">Teste de preenchimento dos campos do model Flight</dt>
-    <script type="text/javascript">moveProgressBar('27.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">flight_number preenchido?</span><span class='duration'>0.00092s</span></dd>
-    <script type="text/javascript">moveProgressBar('36.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">flight_company preenchido?</span><span class='duration'>0.00063s</span></dd>
-    <script type="text/javascript">moveProgressBar('45.4');</script>
-    <dd class="example passed"><span class="passed_spec_name">flight_from preenchido?</span><span class='duration'>0.00061s</span></dd>
-    <script type="text/javascript">moveProgressBar('54.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">flight_to preenchido?</span><span class='duration'>0.00061s</span></dd>
-    <script type="text/javascript">moveProgressBar('63.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">flight_gate preenchido?</span><span class='duration'>0.00061s</span></dd>
-    <script type="text/javascript">moveProgressBar('72.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">flight_hour preenchido?</span><span class='duration'>0.00061s</span></dd>
-    <script type="text/javascript">moveProgressBar('81.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">flight_status preenchido?</span><span class='duration'>0.00060s</span></dd>
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_5" class="passed">Flight</dt>
   </dl>
 </div>
 <div id="div_group_6" class="example_group passed">
   <dl style="margin-left: 15px;">
-  <dt id="example_group_6" class="passed">Teste de validação do model Flight</dt>
-    <script type="text/javascript">moveProgressBar('90.9');</script>
-    <dd class="example passed"><span class="passed_spec_name">Flight valido com campos obrigatorios preenchidos?</span><span class='duration'>0.00078s</span></dd>
-    <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Flight invalido com campos obrigatorios em branco?</span><span class='duration'>0.00161s</span></dd>
+  <dt id="example_group_6" class="passed">Teste de preenchimento dos campos do model Flight</dt>
+    <script type="text/javascript">moveProgressBar('33.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">flight_number preenchido?</span><span class='duration'>0.00088s</span></dd>
+    <script type="text/javascript">moveProgressBar('41.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">flight_company preenchido?</span><span class='duration'>0.00056s</span></dd>
+    <script type="text/javascript">moveProgressBar('50.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">flight_from preenchido?</span><span class='duration'>0.00055s</span></dd>
+    <script type="text/javascript">moveProgressBar('58.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">flight_to preenchido?</span><span class='duration'>0.00054s</span></dd>
+    <script type="text/javascript">moveProgressBar('66.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">flight_gate preenchido?</span><span class='duration'>0.00054s</span></dd>
+    <script type="text/javascript">moveProgressBar('75.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">flight_hour preenchido?</span><span class='duration'>0.00053s</span></dd>
+    <script type="text/javascript">moveProgressBar('83.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">flight_status preenchido?</span><span class='duration'>0.00053s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.07929 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "11 examples, 0 failures";</script>
+<div id="div_group_7" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_7" class="passed">Teste de validação do model Flight</dt>
+    <script type="text/javascript">moveProgressBar('91.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">Flight valido com campos obrigatorios preenchidos?</span><span class='duration'>0.00069s</span></dd>
+    <script type="text/javascript">moveProgressBar('100.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">Flight invalido com campos obrigatorios em branco?</span><span class='duration'>0.00147s</span></dd>
+  </dl>
+</div>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.09559 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "12 examples, 1 failure";</script>
 </div>
 </div>
 </body>

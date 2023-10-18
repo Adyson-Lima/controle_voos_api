@@ -26,4 +26,17 @@ RSpec.describe Api::V1::FlightsController, type: :controller do
     
   end
   
+  describe 'POST /api/v1/flights' do
+    
+    it 'Consegue criar um voo e retornar status 201?' do
+      
+      post :create, params: {flight: {flight_number: @flight.flight_number, flight_company: @flight.flight_company, flight_from: @flight.flight_from, flight_to: @flight.flight_to, flight_gate: @flight.flight_gate, flight_hour: @flight.flight_hour, flight_status: @flight.flight_status},format: :json}
+      
+      expect(response.body).to include_json(flight_number: @flight.flight_number)
+      expect(response).to have_http_status(201)
+      
+    end
+    
+  end
+  
 end
