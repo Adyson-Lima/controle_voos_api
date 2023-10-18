@@ -18,7 +18,17 @@ class Api::V1::FlightsController < ApplicationController
     if @flight.save
       render json: @flight, status: :created, location: api_v1_flight_url(@flight)
     else
-      render json: @flight.errors, staus: internal_server_error
+      render json: @flight.errors, status: :internal_server_error
+    end
+    
+  end
+  
+  def update
+    
+    if @flight.update(flight_params)
+      render json: @flight
+    else
+      render json: @flight.errors, status: :internal_server_error
     end
     
   end
