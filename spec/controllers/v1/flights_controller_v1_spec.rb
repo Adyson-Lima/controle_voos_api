@@ -16,7 +16,7 @@ RSpec.describe Api::V1::FlightsController, type: :controller do
         
   end
   
-  describe 'GET /api/v1/flight/devices/{id}' do
+  describe 'GET /api/v1/flights/{id}' do
     
     it 'Consegue listar um voo específico e retornar status 200?' do
       get :show, params: {id: @flight.id}
@@ -37,6 +37,17 @@ RSpec.describe Api::V1::FlightsController, type: :controller do
       
     end
     
+  end
+  
+  describe 'PATCH /api/v1/flights/{id}' do
+    
+    it 'Consegue atualizar um voo e retornar status 200?' do
+      flight = Flight.last
+      patch :update, params: {flight: {flight_number: "5693", flight_company: @flight.flight_company, flight_from: @flight.flight_from, flight_to: @flight.flight_to, flight_gate: @flight.flight_gate, flight_hour: @flight.flight_hour, flight_status: @flight.flight_status},id: flight.id}
+      
+      expect(response.body).to include_json(flight_number: "5693")
+      expect(response).to have_http_status(200)
+    end
   end
   
 end
