@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>development.log - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    
+<div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+    <li><a href="../Gemfile.html">Gemfile</a>
+    <li><a href="../Gemfile_lock.html">Gemfile.lock</a>
+    <li><a href="../README_md.html">README</a>
+    <li><a href="../Rakefile.html">Rakefile</a>
+    <li><a href="../config_ru.html">config.ru</a>
+    <li><details><summary>config</summary>
+    <ul class="link-list">
+      <li><a href="../config/credentials_yml_enc.html">credentials.yml.enc</a>
+      <li><a href="../config/master_key.html">master.key</a>
+    </ul></details>
+    <li><details open><summary>log</summary>
+    <ul class="link-list">
+      <li><a href="../log/development_log.html">development.log</a>
+      <li><a href="../log/test_log.html">test.log</a>
+    </ul></details>
+    <li><a href="../public/robots_txt.html">robots</a>
+    <li><details><summary>tmp</summary>
+    <ul class="link-list">
+      <li><a href="../tmp/development_secret_txt.html">development_secret</a>
+      <li><a href="../tmp/restart_txt.html">restart</a>
+    </ul></details>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page log/development.log">
+
+<p>Started GET “/” for 127.0.0.1 at 2023-09-27 16:35:31 -0300 Processing by Rails::WelcomeController#index as HTML</p>
+
+<pre>Rendering /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+Rendered /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 932)</pre>
+
+<p>Completed 200 OK in 22ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 9784)</p>
+
+<pre>[1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE &quot;schema_migrations&quot; (&quot;version&quot; varchar NOT NULL PRIMARY KEY)[0m
+[1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE &quot;ar_internal_metadata&quot; (&quot;key&quot; varchar NOT NULL PRIMARY KEY, &quot;value&quot; varchar, &quot;created_at&quot; datetime(6) NOT NULL, &quot;updated_at&quot; datetime(6) NOT NULL)[0m
+[1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Migrating to <a href="../CreateFlights.html"><code>CreateFlights</code></a> (20231009191101)</p>
+
+<pre>[1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE &quot;flights&quot; (&quot;id&quot; integer PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;flight_number&quot; varchar, &quot;flight_company&quot; varchar, &quot;flight_from&quot; varchar, &quot;flight_to&quot; varchar, &quot;flight_gate&quot; varchar, &quot;flight_hour&quot; varchar, &quot;flight_status&quot; varchar, &quot;created_at&quot; datetime(6) NOT NULL, &quot;updated_at&quot; datetime(6) NOT NULL)[0m
+[1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES (?)[0m  [[&quot;version&quot;, &quot;20231009191101&quot;]]
+[1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO &quot;ar_internal_metadata&quot; (&quot;key&quot;, &quot;value&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?)[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;value&quot;, &quot;development&quot;], [&quot;created_at&quot;, &quot;2023-10-09 19:12:45.884841&quot;], [&quot;updated_at&quot;, &quot;2023-10-09 19:12:45.884841&quot;]]
+[1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2023-10-17 16:44:15 -0300</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Processing by Rails::WelcomeController#index as HTML</p>
+
+<pre>Rendering /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+Rendered /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.6ms | Allocations: 826)</pre>
+
+<p>Completed 200 OK in 25ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 7283)</p>
+
+<p>Started GET “/api/v1/flights” for 127.0.0.1 at 2023-10-17 16:44:26 -0300 Processing by <a href="../Api/V1/FlightsController.html#method-i-index"><code>Api::V1::FlightsController#index</code></a> as HTML</p>
+
+<pre>[1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT &quot;flights&quot;.* FROM &quot;flights&quot;[0m
+↳ app/controllers/api/v1/flights_controller.rb:7:in `index&#39;</pre>
+
+<p>Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.6ms | Allocations: 2003)</p>
+
+<p>Started GET “/api/v1/flight” for 127.0.0.1 at 2023-10-17 16:44:31 -0300</p>
+
+<p>ActionController::RoutingError (No route matches [GET] “/api/v1/flight”):</p>
+
+<p>Started GET “/favicon.ico” for 127.0.0.1 at 2023-10-17 16:44:32 -0300</p>
+
+<p>ActionController::RoutingError (No route matches [GET] “/favicon.ico”):</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT &quot;ar_internal_metadata&quot;.&quot;value&quot; FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT &quot;ar_internal_metadata&quot;.&quot;value&quot; FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT &quot;ar_internal_metadata&quot;.&quot;value&quot; FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (11.6ms)[0m  [1m[35mCREATE TABLE &quot;schema_migrations&quot; (&quot;version&quot; varchar NOT NULL PRIMARY KEY)[0m
+[1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE &quot;ar_internal_metadata&quot; (&quot;key&quot; varchar NOT NULL PRIMARY KEY, &quot;value&quot; varchar, &quot;created_at&quot; datetime(6) NOT NULL, &quot;updated_at&quot; datetime(6) NOT NULL)[0m
+[1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Migrating to <a href="../CreateFlights.html"><code>CreateFlights</code></a> (20231009191101)</p>
+
+<pre>[1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE &quot;flights&quot; (&quot;id&quot; integer PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;flight_number&quot; varchar, &quot;flight_company&quot; varchar, &quot;flight_from&quot; varchar, &quot;flight_to&quot; varchar, &quot;flight_gate&quot; varchar, &quot;flight_hour&quot; varchar, &quot;flight_status&quot; varchar, &quot;created_at&quot; datetime(6) NOT NULL, &quot;updated_at&quot; datetime(6) NOT NULL)[0m
+[1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES (?)[0m  [[&quot;version&quot;, &quot;20231009191101&quot;]]
+[1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO &quot;ar_internal_metadata&quot; (&quot;key&quot;, &quot;value&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?)[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;value&quot;, &quot;development&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:12:12.729577&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:12:12.729577&quot;]]
+[1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.3ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;1234&quot;], [&quot;flight_company&quot;, &quot;latam&quot;], [&quot;flight_from&quot;, &quot;poa&quot;], [&quot;flight_to&quot;, &quot;bel&quot;], [&quot;flight_gate&quot;, &quot;3&quot;], [&quot;flight_hour&quot;, &quot;03:00&quot;], [&quot;flight_status&quot;, &quot;landed&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:12:12.770053&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:12:12.770053&quot;]]
+[1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.3ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;1234&quot;], [&quot;flight_company&quot;, &quot;latam&quot;], [&quot;flight_from&quot;, &quot;cgh&quot;], [&quot;flight_to&quot;, &quot;gru&quot;], [&quot;flight_gate&quot;, &quot;4&quot;], [&quot;flight_hour&quot;, &quot;15:00&quot;], [&quot;flight_status&quot;, &quot;estimated&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:12:12.778356&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:12:12.778356&quot;]]
+[1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.3ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;1234&quot;], [&quot;flight_company&quot;, &quot;latam&quot;], [&quot;flight_from&quot;, &quot;cgh&quot;], [&quot;flight_to&quot;, &quot;gru&quot;], [&quot;flight_gate&quot;, &quot;2&quot;], [&quot;flight_hour&quot;, &quot;15:00&quot;], [&quot;flight_status&quot;, &quot;estimated&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:12:12.785933&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:12:12.785933&quot;]]
+[1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.3ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;3456&quot;], [&quot;flight_company&quot;, &quot;azul&quot;], [&quot;flight_from&quot;, &quot;poa&quot;], [&quot;flight_to&quot;, &quot;cgh&quot;], [&quot;flight_gate&quot;, &quot;1&quot;], [&quot;flight_hour&quot;, &quot;12:00&quot;], [&quot;flight_status&quot;, &quot;confirmed&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:12:12.794174&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:12:12.794174&quot;]]
+[1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.2ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;1234&quot;], [&quot;flight_company&quot;, &quot;gol&quot;], [&quot;flight_from&quot;, &quot;cgh&quot;], [&quot;flight_to&quot;, &quot;poa&quot;], [&quot;flight_gate&quot;, &quot;2&quot;], [&quot;flight_hour&quot;, &quot;03:00&quot;], [&quot;flight_status&quot;, &quot;confirmed&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:12:12.801385&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:12:12.801385&quot;]]
+[1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.3ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;3456&quot;], [&quot;flight_company&quot;, &quot;gol&quot;], [&quot;flight_from&quot;, &quot;cgh&quot;], [&quot;flight_to&quot;, &quot;cgh&quot;], [&quot;flight_gate&quot;, &quot;1&quot;], [&quot;flight_hour&quot;, &quot;12:00&quot;], [&quot;flight_status&quot;, &quot;landed&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:12:12.808146&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:12:12.808146&quot;]]
+[1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.3ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;1234&quot;], [&quot;flight_company&quot;, &quot;latam&quot;], [&quot;flight_from&quot;, &quot;bel&quot;], [&quot;flight_to&quot;, &quot;poa&quot;], [&quot;flight_gate&quot;, &quot;2&quot;], [&quot;flight_hour&quot;, &quot;15:00&quot;], [&quot;flight_status&quot;, &quot;confirmed&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:12:12.815386&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:12:12.815386&quot;]]
+[1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.3ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;1234&quot;], [&quot;flight_company&quot;, &quot;gol&quot;], [&quot;flight_from&quot;, &quot;poa&quot;], [&quot;flight_to&quot;, &quot;cgh&quot;], [&quot;flight_gate&quot;, &quot;3&quot;], [&quot;flight_hour&quot;, &quot;12:00&quot;], [&quot;flight_status&quot;, &quot;canceled&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:12:12.822586&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:12:12.822586&quot;]]
+[1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.2ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;1234&quot;], [&quot;flight_company&quot;, &quot;gol&quot;], [&quot;flight_from&quot;, &quot;gru&quot;], [&quot;flight_to&quot;, &quot;gru&quot;], [&quot;flight_gate&quot;, &quot;1&quot;], [&quot;flight_hour&quot;, &quot;15:00&quot;], [&quot;flight_status&quot;, &quot;landed&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:12:12.829539&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:12:12.829539&quot;]]
+[1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.2ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;3456&quot;], [&quot;flight_company&quot;, &quot;latam&quot;], [&quot;flight_from&quot;, &quot;bel&quot;], [&quot;flight_to&quot;, &quot;bel&quot;], [&quot;flight_gate&quot;, &quot;4&quot;], [&quot;flight_hour&quot;, &quot;03:00&quot;], [&quot;flight_status&quot;, &quot;canceled&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:12:12.836044&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:12:12.836044&quot;]]
+[1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2023-10-17 22:12:46 -0300</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Processing by Rails::WelcomeController#index as HTML</p>
+
+<pre>Rendering /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+Rendered /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.2ms | Allocations: 826)</pre>
+
+<p>Completed 200 OK in 1643ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 973163)</p>
+
+<p>Started GET “/api/v1/flights” for 127.0.0.1 at 2023-10-17 22:13:00 -0300 Processing by <a href="../Api/V1/FlightsController.html#method-i-index"><code>Api::V1::FlightsController#index</code></a> as HTML</p>
+
+<pre>[1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT &quot;flights&quot;.* FROM &quot;flights&quot;[0m
+↳ app/controllers/api/v1/flights_controller.rb:7:in `index&#39;</pre>
+
+<p>Completed 200 OK in 65ms (Views: 59.8ms | ActiveRecord: 1.0ms | Allocations: 22101)</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT &quot;ar_internal_metadata&quot;.&quot;value&quot; FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT &quot;ar_internal_metadata&quot;.&quot;value&quot; FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT &quot;ar_internal_metadata&quot;.&quot;value&quot; FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE &quot;schema_migrations&quot; (&quot;version&quot; varchar NOT NULL PRIMARY KEY)[0m
+[1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE &quot;ar_internal_metadata&quot; (&quot;key&quot; varchar NOT NULL PRIMARY KEY, &quot;value&quot; varchar, &quot;created_at&quot; datetime(6) NOT NULL, &quot;updated_at&quot; datetime(6) NOT NULL)[0m
+[1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Migrating to <a href="../CreateFlights.html"><code>CreateFlights</code></a> (20231009191101)</p>
+
+<pre>[1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE &quot;flights&quot; (&quot;id&quot; integer PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;flight_number&quot; varchar, &quot;flight_company&quot; varchar, &quot;flight_from&quot; varchar, &quot;flight_to&quot; varchar, &quot;flight_gate&quot; varchar, &quot;flight_hour&quot; varchar, &quot;flight_status&quot; varchar, &quot;created_at&quot; datetime(6) NOT NULL, &quot;updated_at&quot; datetime(6) NOT NULL)[0m
+[1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES (?)[0m  [[&quot;version&quot;, &quot;20231009191101&quot;]]
+[1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO &quot;ar_internal_metadata&quot; (&quot;key&quot;, &quot;value&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?)[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;value&quot;, &quot;development&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:13:47.639606&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:13:47.639606&quot;]]
+[1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.3ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;1234&quot;], [&quot;flight_company&quot;, &quot;gol&quot;], [&quot;flight_from&quot;, &quot;bel&quot;], [&quot;flight_to&quot;, &quot;cgh&quot;], [&quot;flight_gate&quot;, &quot;4&quot;], [&quot;flight_hour&quot;, &quot;15:00&quot;], [&quot;flight_status&quot;, &quot;estimated&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:13:47.679827&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:13:47.679827&quot;]]
+[1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.2ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;3456&quot;], [&quot;flight_company&quot;, &quot;azul&quot;], [&quot;flight_from&quot;, &quot;bel&quot;], [&quot;flight_to&quot;, &quot;gru&quot;], [&quot;flight_gate&quot;, &quot;2&quot;], [&quot;flight_hour&quot;, &quot;18:45&quot;], [&quot;flight_status&quot;, &quot;estimated&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:13:47.687751&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:13:47.687751&quot;]]
+[1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.2ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;1234&quot;], [&quot;flight_company&quot;, &quot;azul&quot;], [&quot;flight_from&quot;, &quot;poa&quot;], [&quot;flight_to&quot;, &quot;gru&quot;], [&quot;flight_gate&quot;, &quot;3&quot;], [&quot;flight_hour&quot;, &quot;12:00&quot;], [&quot;flight_status&quot;, &quot;canceled&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:13:47.694182&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:13:47.694182&quot;]]
+[1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.2ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;1234&quot;], [&quot;flight_company&quot;, &quot;gol&quot;], [&quot;flight_from&quot;, &quot;poa&quot;], [&quot;flight_to&quot;, &quot;gru&quot;], [&quot;flight_gate&quot;, &quot;3&quot;], [&quot;flight_hour&quot;, &quot;18:45&quot;], [&quot;flight_status&quot;, &quot;landed&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:13:47.700515&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:13:47.700515&quot;]]
+[1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.2ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;3478&quot;], [&quot;flight_company&quot;, &quot;azul&quot;], [&quot;flight_from&quot;, &quot;poa&quot;], [&quot;flight_to&quot;, &quot;cgh&quot;], [&quot;flight_gate&quot;, &quot;4&quot;], [&quot;flight_hour&quot;, &quot;03:00&quot;], [&quot;flight_status&quot;, &quot;canceled&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:13:47.706950&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:13:47.706950&quot;]]
+[1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.2ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;1234&quot;], [&quot;flight_company&quot;, &quot;gol&quot;], [&quot;flight_from&quot;, &quot;poa&quot;], [&quot;flight_to&quot;, &quot;gru&quot;], [&quot;flight_gate&quot;, &quot;2&quot;], [&quot;flight_hour&quot;, &quot;15:00&quot;], [&quot;flight_status&quot;, &quot;estimated&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:13:47.713225&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:13:47.713225&quot;]]
+[1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.2ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;1234&quot;], [&quot;flight_company&quot;, &quot;latam&quot;], [&quot;flight_from&quot;, &quot;poa&quot;], [&quot;flight_to&quot;, &quot;gru&quot;], [&quot;flight_gate&quot;, &quot;1&quot;], [&quot;flight_hour&quot;, &quot;18:45&quot;], [&quot;flight_status&quot;, &quot;estimated&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:13:47.719535&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:13:47.719535&quot;]]
+[1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.2ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;1234&quot;], [&quot;flight_company&quot;, &quot;gol&quot;], [&quot;flight_from&quot;, &quot;bel&quot;], [&quot;flight_to&quot;, &quot;cgh&quot;], [&quot;flight_gate&quot;, &quot;4&quot;], [&quot;flight_hour&quot;, &quot;18:45&quot;], [&quot;flight_status&quot;, &quot;canceled&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:13:47.726801&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:13:47.726801&quot;]]
+[1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.2ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;3478&quot;], [&quot;flight_company&quot;, &quot;gol&quot;], [&quot;flight_from&quot;, &quot;poa&quot;], [&quot;flight_to&quot;, &quot;cgh&quot;], [&quot;flight_gate&quot;, &quot;2&quot;], [&quot;flight_hour&quot;, &quot;12:00&quot;], [&quot;flight_status&quot;, &quot;landed&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:13:47.733461&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:13:47.733461&quot;]]
+[1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFlight Create (0.2ms)[0m  [1m[32mINSERT INTO &quot;flights&quot; (&quot;flight_number&quot;, &quot;flight_company&quot;, &quot;flight_from&quot;, &quot;flight_to&quot;, &quot;flight_gate&quot;, &quot;flight_hour&quot;, &quot;flight_status&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [[&quot;flight_number&quot;, &quot;1234&quot;], [&quot;flight_company&quot;, &quot;azul&quot;], [&quot;flight_from&quot;, &quot;poa&quot;], [&quot;flight_to&quot;, &quot;cgh&quot;], [&quot;flight_gate&quot;, &quot;3&quot;], [&quot;flight_hour&quot;, &quot;12:00&quot;], [&quot;flight_status&quot;, &quot;canceled&quot;], [&quot;created_at&quot;, &quot;2023-10-18 01:13:47.739942&quot;], [&quot;updated_at&quot;, &quot;2023-10-18 01:13:47.739942&quot;]]
+[1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m</pre>
+
+<p>Started GET “/api/v1/flights” for 127.0.0.1 at 2023-10-17 22:14:03 -0300</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Processing by <a href="../Api/V1/FlightsController.html#method-i-index"><code>Api::V1::FlightsController#index</code></a> as HTML</p>
+
+<pre>[1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT &quot;flights&quot;.* FROM &quot;flights&quot;[0m
+↳ app/controllers/api/v1/flights_controller.rb:7:in `index&#39;</pre>
+
+<p>Completed 200 OK in 45ms (Views: 32.1ms | ActiveRecord: 0.8ms | Allocations: 41082)</p>
+
+<p>Started GET “/api/v1/flights” for ::1 at 2023-10-17 22:14:11 -0300 Processing by <a href="../Api/V1/FlightsController.html#method-i-index"><code>Api::V1::FlightsController#index</code></a> as <strong>/</strong></p>
+
+<pre>[1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT &quot;flights&quot;.* FROM &quot;flights&quot;[0m
+↳ app/controllers/api/v1/flights_controller.rb:7:in `index&#39;</pre>
+
+<p>Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 2442)</p>
+
+<p>Started GET “/api/v1/flights” for ::1 at 2023-10-17 22:14:59 -0300 Processing by <a href="../Api/V1/FlightsController.html#method-i-index"><code>Api::V1::FlightsController#index</code></a> as <strong>/</strong></p>
+
+<pre>[1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT &quot;flights&quot;.* FROM &quot;flights&quot;[0m
+↳ app/controllers/api/v1/flights_controller.rb:7:in `index&#39;</pre>
+
+<p>Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 2343)</p>
+
+<p>Started GET “/api/v1/flights” for ::1 at 2023-10-17 22:18:17 -0300 Processing by <a href="../Api/V1/FlightsController.html#method-i-index"><code>Api::V1::FlightsController#index</code></a> as <strong>/</strong></p>
+
+<pre>[1m[36mFlight Load (0.1ms)[0m  [1m[34mSELECT &quot;flights&quot;.* FROM &quot;flights&quot;[0m
+↳ app/controllers/api/v1/flights_controller.rb:7:in `index&#39;</pre>
+
+<p>Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 2343)</p>
+
+<p>Started GET “/api/v1/flights” for ::1 at 2023-10-17 22:19:04 -0300 Processing by <a href="../Api/V1/FlightsController.html#method-i-index"><code>Api::V1::FlightsController#index</code></a> as <strong>/</strong></p>
+
+<pre>[1m[36mFlight Load (0.1ms)[0m  [1m[34mSELECT &quot;flights&quot;.* FROM &quot;flights&quot;[0m
+↳ app/controllers/api/v1/flights_controller.rb:7:in `index&#39;</pre>
+
+<p>Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms | Allocations: 2343)</p>
+
+<p>Started GET “/api/v1/flights” for ::1 at 2023-10-17 22:19:08 -0300 Processing by <a href="../Api/V1/FlightsController.html#method-i-index"><code>Api::V1::FlightsController#index</code></a> as <strong>/</strong></p>
+
+<pre>[1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT &quot;flights&quot;.* FROM &quot;flights&quot;[0m
+↳ app/controllers/api/v1/flights_controller.rb:7:in `index&#39;</pre>
+
+<p>Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 2331)</p>
+
+<p>Started GET “/api/v1/flights” for 127.0.0.1 at 2023-10-17 22:19:45 -0300 Processing by <a href="../Api/V1/FlightsController.html#method-i-index"><code>Api::V1::FlightsController#index</code></a> as HTML</p>
+
+<pre>[1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT &quot;flights&quot;.* FROM &quot;flights&quot;[0m
+↳ app/controllers/api/v1/flights_controller.rb:7:in `index&#39;</pre>
+
+<p>Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms | Allocations: 2327)</p>
+
+<p>Started GET “/api/v1/flights” for ::1 at 2023-10-17 22:35:28 -0300</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Processing by <a href="../Api/V1/FlightsController.html#method-i-index"><code>Api::V1::FlightsController#index</code></a> as <strong>/</strong></p>
+
+<pre>[1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT &quot;flights&quot;.* FROM &quot;flights&quot;[0m
+↳ app/controllers/api/v1/flights_controller.rb:7:in `index&#39;</pre>
+
+<p>Completed 200 OK in 57ms (Views: 45.6ms | ActiveRecord: 0.8ms | Allocations: 41090)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2023-10-18 13:47:57 -0300</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Processing by Rails::WelcomeController#index as HTML</p>
+
+<pre>Rendering /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+Rendered /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.5ms | Allocations: 826)</pre>
+
+<p>Completed 200 OK in 446ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 286011)</p>
+
+<p>Started GET “/rails/info/routes” for 127.0.0.1 at 2023-10-18 13:48:07 -0300 Processing by Rails::InfoController#routes as HTML</p>
+
+<pre>Rendering layout /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/layouts/application.html.erb
+Rendering /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+Rendered collection of /usr/local/rvm/gems/ruby-3.0.4/gems/actionpack-7.0.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb [31 times] (Duration: 15.7ms | Allocations: 5318)
+Rendered /usr/local/rvm/gems/ruby-3.0.4/gems/actionpack-7.0.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 5.8ms | Allocations: 1772)
+Rendered /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 30.8ms | Allocations: 11070)
+Rendered layout /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/layouts/application.html.erb (Duration: 32.2ms | Allocations: 11502)</pre>
+
+<p>Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.0ms | Allocations: 13616)</p>
+
+<p>Started GET “/favicon.ico” for 127.0.0.1 at 2023-10-18 13:48:07 -0300</p>
+
+<p>ActionController::RoutingError (No route matches [GET] “/favicon.ico”):</p>
+
+<p>Started GET “/api/v1/flights” for 127.0.0.1 at 2023-10-18 13:48:49 -0300 Processing by <a href="../Api/V1/FlightsController.html#method-i-index"><code>Api::V1::FlightsController#index</code></a> as HTML</p>
+
+<pre>[1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT &quot;flights&quot;.* FROM &quot;flights&quot;[0m
+↳ app/controllers/api/v1/flights_controller.rb:7:in `index&#39;</pre>
+
+<p>Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 1.2ms | Allocations: 22096)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2023-10-18 14:22:27 -0300</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Processing by Rails::WelcomeController#index as HTML</p>
+
+<pre>Rendering /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+Rendered /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.8ms | Allocations: 828)</pre>
+
+<p>Completed 200 OK in 259ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 286014)</p>
+
+<p>Started GET “/rails/info/routes” for 127.0.0.1 at 2023-10-18 14:22:37 -0300 Processing by Rails::InfoController#routes as HTML</p>
+
+<pre>Rendering layout /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/layouts/application.html.erb
+Rendering /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+Rendered collection of /usr/local/rvm/gems/ruby-3.0.4/gems/actionpack-7.0.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb [31 times] (Duration: 10.2ms | Allocations: 5318)
+Rendered /usr/local/rvm/gems/ruby-3.0.4/gems/actionpack-7.0.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 2.6ms | Allocations: 1772)
+Rendered /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 26.6ms | Allocations: 11070)
+Rendered layout /usr/local/rvm/gems/ruby-3.0.4/gems/railties-7.0.8/lib/rails/templates/layouts/application.html.erb (Duration: 29.3ms | Allocations: 11502)</pre>
+
+<p>Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.0ms | Allocations: 13616)</p>
+
+<p>Started GET “/favicon.ico” for 127.0.0.1 at 2023-10-18 14:22:37 -0300</p>
+
+<p>ActionController::RoutingError (No route matches [GET] “/favicon.ico”):</p>
+
+<p>Started GET “/rails/info/routes?path=get” for 127.0.0.1 at 2023-10-18 14:22:41 -0300 Processing by Rails::InfoController#routes as <strong>/</strong></p>
+
+<pre>Parameters: {&quot;path&quot;=&gt;&quot;get&quot;}</pre>
+
+<p>Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1759)</p>
+
+<p>Started GET “/rails/info/routes?path=GET” for 127.0.0.1 at 2023-10-18 14:22:45 -0300 Processing by Rails::InfoController#routes as <strong>/</strong></p>
+
+<pre>Parameters: {&quot;path&quot;=&gt;&quot;GET&quot;}</pre>
+
+<p>Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 690)</p>
+
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.5.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

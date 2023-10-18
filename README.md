@@ -36,7 +36,7 @@ Pré-requisitos:
 # clonar repositório
 git clone https://github.com/Adyson-Lima/controle_voos_api.git
 
-# entrar na pasta rodovtransport_api
+# entrar na pasta controle_voos_api
 cd controle_voos_api
 
 # instalar dependencias com bundle
