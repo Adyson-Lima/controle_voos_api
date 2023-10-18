@@ -1,13 +1,15 @@
 # API REST "controle_voos", desenvolvida em Ruby on Rails, com versionamento de recursos, e autenticação JWT. Com frontend web <a href="https://github.com/Adyson-Lima/controle_voos_web">React</a>. 
 
 ## Endpoints da API 
--GET:
+-GET:    localhost/api/v1/flights
 
--POST:
+-GET:    localhost/api/v1/flights/id
 
--PUT:
+-POST:   localhost/api/v1/flights
 
--DELETE:
+-PATCH:  localhost/api/v1/flights/id
+
+-DELETE: localhost/api/v1/flights/id
 
 # Sobre a API
 ## A documentação completa RDOC está na pasta controlevoos/documentacao
